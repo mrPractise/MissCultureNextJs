@@ -107,14 +107,6 @@ const Navigation = () => {
               className="md:hidden fixed left-0 top-0 bottom-0 w-80 bg-white shadow-elegant-lg z-40 overflow-y-auto"
             >
               <div className="p-6">
-                {/* Logo in mobile menu */}
-                <div className="flex items-center space-x-2 mb-8 pb-6 border-b border-gray-200">
-                  <Globe className="h-8 w-8 text-red-600" />
-                  <span className="text-lg font-bold text-gray-900">
-                    Miss Culture Global Kenya
-                  </span>
-                </div>
-                
                 {/* Navigation items */}
                 <div className="space-y-2">
                   {navItems.map((item, index) => (

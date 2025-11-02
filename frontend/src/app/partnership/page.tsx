@@ -37,67 +37,46 @@ const PartnershipPage = () => {
     {
       name: 'Kenya Tourism Board',
       logo: '/api/placeholder/200/100',
-      description: 'Promoting Kenya\'s cultural heritage globally',
-      tier: 'Platinum'
+      description: 'Promoting Kenya\'s cultural heritage globally'
     },
     {
       name: 'Safaricom Foundation',
       logo: '/api/placeholder/200/100',
-      description: 'Empowering communities through technology',
-      tier: 'Gold'
+      description: 'Empowering communities through technology'
     },
     {
       name: 'Equity Bank',
       logo: '/api/placeholder/200/100',
-      description: 'Supporting youth empowerment programs',
-      tier: 'Gold'
+      description: 'Supporting youth empowerment programs'
     },
     {
       name: 'KCB Bank',
       logo: '/api/placeholder/200/100',
-      description: 'Investing in cultural preservation',
-      tier: 'Silver'
+      description: 'Investing in cultural preservation'
     },
     {
       name: 'Coca-Cola East Africa',
       logo: '/api/placeholder/200/100',
-      description: 'Community development partner',
-      tier: 'Silver'
+      description: 'Community development partner'
     },
     {
       name: 'Kenya Airways',
       logo: '/api/placeholder/200/100',
-      description: 'Connecting Kenya to the world',
-      tier: 'Silver'
+      description: 'Connecting Kenya to the world'
     },
     {
       name: 'Tusker',
       logo: '/api/placeholder/200/100',
-      description: 'Celebrating Kenyan spirit and culture',
-      tier: 'Bronze'
+      description: 'Celebrating Kenyan spirit and culture'
     },
     {
       name: 'Nation Media Group',
       logo: '/api/placeholder/200/100',
-      description: 'Media partner for cultural visibility',
-      tier: 'Bronze'
+      description: 'Media partner for cultural visibility'
     }
   ]
 
-  const getTierColor = (tier: string) => {
-    switch (tier) {
-      case 'Platinum':
-        return 'border-gray-400 bg-gradient-to-br from-gray-50 to-gray-100'
-      case 'Gold':
-        return 'border-yellow-400 bg-gradient-to-br from-yellow-50 to-amber-50'
-      case 'Silver':
-        return 'border-gray-300 bg-gradient-to-br from-gray-50 to-slate-50'
-      case 'Bronze':
-        return 'border-orange-300 bg-gradient-to-br from-orange-50 to-amber-50'
-      default:
-        return 'border-gray-200 bg-white'
-    }
-  }
+
 
   return (
     <div className="min-h-screen">
@@ -288,20 +267,8 @@ const PartnershipPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`relative rounded-2xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 p-6 border-2 ${getTierColor(sponsor.tier)} group cursor-pointer transform hover:-translate-y-2`}
+                  className="rounded-2xl shadow-elegant hover:shadow-elegant-lg transition-all duration-300 p-6 bg-white border-2 border-gray-200 group cursor-pointer transform hover:-translate-y-2"
                 >
-                  {/* Tier Badge */}
-                  <div className="absolute -top-3 -right-3">
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white shadow-md ${
-                      sponsor.tier === 'Platinum' ? 'bg-gray-500' :
-                      sponsor.tier === 'Gold' ? 'bg-yellow-500' :
-                      sponsor.tier === 'Silver' ? 'bg-gray-400' :
-                      'bg-orange-500'
-                    }`}>
-                      {sponsor.tier}
-                    </span>
-                  </div>
-
                   <div className="flex flex-col items-center text-center">
                     <div className="mb-4 h-20 flex items-center justify-center">
                       <img

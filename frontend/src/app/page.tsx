@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Hero from '@/components/Hero'
 import Highlights from '@/components/Highlights'
-import SocialFeed from '@/components/SocialFeed'
+import BlogFeed from '@/components/BlogFeed'
 import FollowCTA from '@/components/FollowCTA'
 import EventDetailsModal from '@/components/EventDetailsModal'
 
@@ -59,7 +59,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero />
       <Highlights />
-      <SocialFeed />
+      <BlogFeed />
       <FollowCTA />
       
       {/* Upcoming Event Modal */}
